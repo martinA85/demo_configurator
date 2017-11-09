@@ -74,8 +74,7 @@ class SaleOrder(models.Model):
     	to_return = super(SaleOrder, self)._cart_update(product_id=int(product_id),add_qty=add_qty, set_qty=set_qty)
     	order_line = self._cart_find_product_line(product_id, line_id, **kwargs)
     	product = self.env['product.product'].browse(product_id)
-
-		if config != None:
+    	if config != None:
     		config_tmp = self.env['configurateur.config']
     		config = config_tmp.browse(int(config))
     		price = config.total_price
