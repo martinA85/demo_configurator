@@ -83,7 +83,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="text-center">
-                                                            <h5 class="var_out" style=""><img class="variant_img_recap" style="height:60px;width:120px;margin-right:45px;;object-fit:cover;" src="/demo_configurator/static/img/empty.png"/><input type="hidden" t-att-value="p_variant.name"/><span class="ref_output col-sm-10" style="padding-left:10px;font-size:11px"/></h5>
+                                                            <h5 class="var_out" style=""><img class="variant_img_recap" style="height:60px;width:120px;margin-right:45px;;object-fit:cover;" src="/odoo_configurator	/static/img/empty.png"/><input type="hidden" t-att-value="p_variant.name"/><span class="ref_output col-sm-10" style="padding-left:10px;font-size:11px"/></h5>
                                                         </div>
                                                         <div class="text-center">
                                                             <p style="margin-right:34px;">+<span class="variant_extra_recap"> 0 </span>€</p>
@@ -211,7 +211,7 @@
             <t t-call="website.layout">
                 <t t-set="title">Recap de la configuration</t>
                     <div class="oe_structure">
-                        <div style="text-align:-webkit-center;background-image:url(/demo_configurator/static/img/bg.jpeg);padding-bottom:20px;padding-top:20px">
+                        <div style="text-align:-webkit-center;background-image:url(/odoo_configurator/static/img/bg.jpeg);padding-bottom:20px;padding-top:20px">
                             <span t-field="config.config_image" t-field-options='{"widget": "image","class": "oe_avatar cfg_img","style":"border-style:solid;border-width:5px;border-color:#434343"}'/>
                         </div>
                          <div class="container" style="background-color:white; padding-bottom:20px; padding-top:1%;margin-bottom:10px">
@@ -318,7 +318,7 @@
 
     <template id="js_frontend" name="Product Configurator" inherit_id="website.assets_frontend">
         <xpath expr="." position="inside">
-            <script type="text/javascript" src="/demo_configurator/static/js/config.js"></script>
+            <script type="text/javascript" src="/odoo_configurator/static/js/config.js"></script>
         </xpath>
     </template>
 </odoo>

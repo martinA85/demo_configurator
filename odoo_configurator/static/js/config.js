@@ -184,7 +184,7 @@ function clearConfig(){
   variant_tab.getElementsByClassName("variant_extra_recap")[0].innerHTML = " 0 ";
 
   if(layout == "v"){
-    variant_tab.getElementsByClassName("variant_img_recap")[0].src = "/demo_configurator/static/img/empty.png";
+    variant_tab.getElementsByClassName("variant_img_recap")[0].src = "/odoo_configurator/static/img/empty.png";
   }
 
 
