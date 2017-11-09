@@ -28,10 +28,10 @@ function init(){
         product_details.remove(product_details[w]);
       }
     }
-    
+
     layout = document.getElementById("choosen_layout").value;
     console.log(layout);
-    
+
     setTabs();
 }
 
@@ -54,7 +54,7 @@ function clickOption(){
           imgChild.style = "border:none;width:100px;height:100px;";
         }
     }
-    
+
     //step to set active the new active variant
     element.classList.remove("unactive_var");
     element.style = "width:100px;height:100px;";
@@ -140,30 +140,30 @@ function setTabs(){
     if(tabs_menu[t].nodeName == "LI"){
 
       variant_name = tabs_menu[t].childNodes[0].childNodes[0].innerHTML;
-      tabs_menu[t].childNodes[0].href = "#"+variant_name; 
+      tabs_menu[t].childNodes[0].href = "#"+variant_name;
     }
   }
 }
 
 //update the configuration tab
 function updateConfigTab(variant_name){
-  
+
   configTab = document.getElementsByClassName("config_tab")[0];
   variant_tab = configTab.getElementsByClassName(variant_name)[0];
   //variant pannel (used to get active variant informations)
   variant_img = document.getElementById(variant_name).getElementsByClassName("active_var")[0];
   var_div = variant_img.parentElement.parentElement;
-  
+
   extra = var_div.getElementsByClassName("variant_extra")[0].value;
   string = var_div.getElementsByClassName("variant_string")[0].value;
-  
+
   variant_tab.getElementsByClassName("variant_str_recap")[0].innerHTML = string;
   variant_tab.getElementsByClassName("variant_extra_recap")[0].innerHTML = extra;
-  
+
   if(layout == "v"){
     variant_tab.getElementsByClassName("variant_img_recap")[0].src = variant_img.src;
   }
-  
+
 
 }
 
@@ -182,9 +182,9 @@ function clearConfig(){
   variant_tab = this.parentElement.parentElement.parentElement;
   variant_tab.getElementsByClassName("variant_str_recap")[0].innerHTML = "Vide";
   variant_tab.getElementsByClassName("variant_extra_recap")[0].innerHTML = " 0 ";
-  
+
   if(layout == "v"){
-    variant_tab.getElementsByClassName("variant_img_recap")[0].src = "/configOdoo/static/img/empty.png";
+    variant_tab.getElementsByClassName("variant_img_recap")[0].src = "/demo_configurator/static/img/empty.png";
   }
 
 
@@ -201,7 +201,7 @@ function clearConfig(){
         //set to unactive the active img
         active_variant_img.classList.remove("active_var");
         active_variant_img.className += " unactive_var";
-        
+
         //removing the selected icon
         active_parent = active_variant_img.parentElement.parentElement;
         active_parent.removeChild(active_parent.getElementsByClassName("selected_variant_line")[0]);
@@ -237,7 +237,7 @@ $(function() {
   $(".expand").on( "click", function() {
     // $(this).next().slideToggle(200);
     $expand = $(this).find(">:first-child");
-    
+
     if($expand.text() == "+") {
       $expand.text("-");
     } else {
